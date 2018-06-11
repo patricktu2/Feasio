@@ -242,6 +242,7 @@ body {
 }
 body.page-container-boxed {
   background: url("../img/backgrounds/wall_1.jpg") left top no-repeat fixed;
+  background-size: 100% 100%;
   padding: 20px 0px;
 }
 body.page-container-boxed .page-container {

@@ -15,7 +15,7 @@
  * =============================================================================
  */
 
-const videoWidth = 600;
+const videoWidth = 800;
 const videoHeight = 500;
 const stats = new Stats();
 
@@ -41,6 +41,7 @@ async function setupCamera() {
   }
 
   const video = document.getElementById('video');
+  console.log("Video element assigned")
   video.width = videoWidth;
   video.height = videoHeight;
 
@@ -71,9 +72,10 @@ async function loadVideo() {
 const guiState = {
   algorithm: 'single-pose',
   input: {
-    mobileNetArchitecture: isMobile() ? '0.50' : '1.01',
-    outputStride: 16,
-    imageScaleFactor: 0.5,
+    mobileNetArchitecture: isMobile() ? '0.50' : '0.75',
+    //mobileNetArchitecture: 0.75
+    outputStride: 32,
+    imageScaleFactor: 0.3,
   },
   singlePoseDetection: {
     minPoseConfidence: 0.1,
@@ -170,6 +172,8 @@ function setupGui(cameras, net) {
         break;
     }
   });
+
+  gui.close()
 }
 
 /**
