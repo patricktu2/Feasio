@@ -7331,3 +7331,27 @@ li.ext_zip {
 .x-navigation-minimized .xn-logo{
 display:none;
 }
+
+
+ /* Excercise Subpage*/
+.excercise {
+  height: 100%; 
+  width: 100%; 
+  object-fit: contain
+}
+
+.panel-body-excercise {
+  padding:20px !important;
+}
+
+.panel-excercise li{
+  font-size: 18px;
+}
+
+.btn-excercise{
+  padding-top:10px !important;
+  padding-bottom: 10px !important;
+  font-size: 18px;
+}
+
+

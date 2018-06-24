@@ -2,7 +2,7 @@
 <html lang="en">
     <head>        
         <!-- META SECTION -->
-        <title>Physirio - Intelligent Therapy</title>            
+        <title>Feasio* - Intelligent Therapy</title>            
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -59,11 +59,14 @@
                     <li class="xn-openable">
                         <a href="#"><span class="fa fa-male"></span> <span class="xn-text">Excercises</span></a>
                         <ul>
-                            <li class="active"><a href="excercise.html">Excercise 1</a></li>
-                            <li><a href="dist/camera.html">Excercise 2</a></li>
-                            <li><a href="layout-nav-top.html">Excercise 3</a></li>
-                            <li><a href="layout-nav-right.html">Excercise 4</a></li>
-                            <li><a href="layout-nav-top-fixed.html">Excercise 5</a></li>
+                            <li class="active"><a href="excercise1.html">Excercise 1</a></li>
+                            <li><a href="excercise2.html">Excercise 2</a></li>
+                            <li><a href="excercise3.html">Excercise 3</a></li>
+                            <li><a href="excercise4.html">Excercise 4</a></li>
+                            <li><a href="excercise5.html">Excercise 5</a></li>
+                            <li><a href="excercise6.html">Excercise 6</a></li>
+                            <li><a href="excercise7.html">Excercise 7</a></li>
+                            <li><a href="excercise8.html">Excercise 8</a></li>
                         </ul>
                     </li>                                        
                 </ul>
@@ -195,30 +198,65 @@
                 <!-- END BREADCRUMB -->                
                 
                 <div class="page-title">                    
-                    <h2><span class="fa fa-arrow-circle-o-left"></span> Excercise </h2>
+                    <h2><span class="fa fa-arrow-circle-o-left"></span> Excercise 1 </h2>
                 </div>                   
                 
                 <!-- PAGE CONTENT WRAPPER -->
                 <div class="page-content-wrap">
-                
+                    <!-- START FIRST ROW -->
                     <div class="row">
-                        <div class="col-md-12">
+                        <!-- START COLUMN FOR EXCERCISE IMAGE -->
+                        <div class="col-md-4">
                             <div class="panel panel-default">
-                                <div id="info" style="display:none"></div>
-                                <div id="loading">
-                                    Loading the model...
+                                <div  >
+                                    <img src="assets/images/excercises/ex1_t.png" class="excercise">                                    
+                                </div>                                
+                            </div>
+                            <div class="panel panel-default">
+                                <a class="btn btn-info btn-block btn-excercise">Start Excercise</a>
+                            </div> 
+                        </div>
+                        <!-- END COLUMN FOR EXCERCISE IMAGE -->
+                        <!-- START COLUMN FOR EXCERCISE DESCRIPTION -->
+                        <div class="col-md-8">
+                            <div class="panel panel-default panel-excercise">
+                                <div class="panel-heading">
+                                    <h2 >Stabilization Leg - Hip - Back</h2>                                
                                 </div>
+                                <div class="panel-body panel-body-excercise">
+                                    <H3>Goal:</H3>
+                                    <ul>
+                                        <li>stabilize your legs, hips and back</li>
+                                    </ul>
+                                    <H3>Tips:</H3>
+                                    <ul>
+                                        <li>knee should always be above your foot</li>
+                                        <li>stomach and back slightly tensed</li>
+                                        <li>gradually increase the body weight put on your foot</li>
+                                    </ul>
+                                    <H3>Time:</H3>
+                                    <ul>
+                                        <li>3 to 30 seconds depending on your comfort level</li>
+                                    </ul>
 
-                                <div id="main" >
-                                    <video id="video" width="800" height="500" controls>
-                                    <source src="videos/video1.mp4" type="video/mp4">
-                                    </video>
-                                    <canvas id="output">
-                                    </canvas>
+                                    <H3>Equipment:</H3>
+                                    <ul>
+                                        <li>optional: sport pillow/soft pad</li>
+                                    </ul>
                                 </div>
                             </div>
+                            <div class="panel panel-default panel-excercise">
+                                <video  class="excercise" controls="" >
+                                    <source src="Videos/video1.mp4" type="video/mp4">
+                                </video>
+                            </div>
                         </div>
-                    </div>                
+                        <!-- END COLUMN FOR EXCERCISE DESCRIPTION -->                        
+                    </div> 
+                    <!-- END FIRST ROW -->
+                    <div class="row">
+
+                    </div>
                     
                 </div>
                 <!-- END PAGE CONTENT WRAPPER -->                
@@ -274,7 +312,6 @@
         <script type="text/javascript" src="js/dat.gui.js"></script>
         <script type="text/javascript" src="js/stats.min.js"></script>
         <script type="text/javascript" src="js/demo_util.js"></script>
-        <script type="text/javascript" src="js/video.js"></script>          
 
  
         <!-- END TEMPLATE -->
