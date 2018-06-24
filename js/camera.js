@@ -15,9 +15,13 @@
  * =============================================================================
  */
 
-const videoWidth = 800;
+const videoWidth = $("#video-panel").width(); //Video hight dependant on size of container
 const videoHeight = 500;
 const stats = new Stats();
+
+var exerciseVideo = document.getElementById("excercise_demo_video"); 
+const exerciseVideoWidth = 240; //size of the small frame that should display the exercise video
+const exerciseVideoHeight = 135;
 
 function isAndroid() {
   return /Android/i.test(navigator.userAgent);
@@ -196,6 +200,16 @@ function detectPoseInRealTime(video, net) {
   canvas.width = videoWidth;
   canvas.height = videoHeight;
 
+
+
+// ------------ Assign second canvas for the overlap exercise video 
+  const canvas_exercise = document.getElementById('exercise-video-canvas');
+  const ctx_exercise = canvas_exercise.getContext('2d');
+  canvas_exercise.width = exerciseVideoWidth;
+  canvas_exercise.height = exerciseVideoHeight;
+  exerciseVideo.play()
+// --------
+
   async function poseDetectionFrame() {
     if (guiState.changeToArchitecture) {
       // Important to purge variables and free up GPU memory
@@ -240,13 +254,24 @@ function detectPoseInRealTime(video, net) {
     }
 
     ctx.clearRect(0, 0, videoWidth, videoHeight);
+    ctx_exercise.clearRect(0,0, exerciseVideoWidth, exerciseVideoHeight)
 
     if (guiState.output.showVideo) {
+
       ctx.save();
       ctx.scale(-1, 1);
       ctx.translate(-videoWidth, 0);
       ctx.drawImage(video, 0, 0, videoWidth, videoHeight);
       ctx.restore();
+
+      
+      ctx_exercise.save();
+      ctx_exercise.scale(-1, 1);
+      ctx_exercise.translate(-exerciseVideoWidth, 0);
+      ctx_exercise.drawImage(exerciseVideo, 0, 0, exerciseVideoWidth, exerciseVideoHeight);
+      ctx_exercise.restore();
+
+
     }
 
     // For each pose (i.e. person) detected in an image, loop through the poses
@@ -287,6 +312,7 @@ async function bindPage() {
 
   try {
     video = await loadVideo();
+
   } catch(e) {
     let info = document.getElementById('info');
     info.textContent = "this browser does not support video capture, or this device does not have a camera";
@@ -299,6 +325,8 @@ async function bindPage() {
   detectPoseInRealTime(video, net);
 }
 
+
+// ------------- MAIN: Kicking of the Demo ------------
 navigator.getUserMedia = navigator.getUserMedia ||
   navigator.webkitGetUserMedia ||
   navigator.mozGetUserMedia;

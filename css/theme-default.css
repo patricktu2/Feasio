@@ -241,7 +241,7 @@ body {
   padding-right: 50px;
 }
 body.page-container-boxed {
-  background: url("../img/backgrounds/wall_1.jpg") left top no-repeat fixed;
+  background: url("../img/backgrounds/yoga.jpg") left top no-repeat fixed;
   background-size: 100% 100%;
   padding: 20px 0px;
 }
@@ -7355,3 +7355,25 @@ display:none;
 }
 
 
+/* Excerise Demp */
+.exercise-demo {
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  display: none;
+}
+
+#exercise-video-canvas{
+  z-index: 2;
+  position:absolute;
+  left:10px;
+  top:10px;
+}
+
+#output {
+  z-index: 1; 
+  position:absolute; 
+  left:0px;
+  top:0px;
+}
