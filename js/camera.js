@@ -207,7 +207,7 @@ function detectPoseInRealTime(video, net) {
   const ctx_exercise = canvas_exercise.getContext('2d');
   canvas_exercise.width = exerciseVideoWidth;
   canvas_exercise.height = exerciseVideoHeight;
-  exerciseVideo.play()
+  //exerciseVideo.play()
 // --------
 
   async function poseDetectionFrame() {
