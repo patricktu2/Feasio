@@ -36,6 +36,14 @@ function isMobile() {
 }
 
 /**
+*
+* setups the canvas responsible for showing a excercise physio video
+*/
+function setupVideoExerciseCanvas (){
+
+}
+
+/**
  * Loads a the camera to be used in the demo
  *
  */
@@ -207,7 +215,6 @@ function detectPoseInRealTime(video, net) {
   const ctx_exercise = canvas_exercise.getContext('2d');
   canvas_exercise.width = exerciseVideoWidth;
   canvas_exercise.height = exerciseVideoHeight;
-  //exerciseVideo.play()
 // --------
 
   async function poseDetectionFrame() {
@@ -257,14 +264,14 @@ function detectPoseInRealTime(video, net) {
     ctx_exercise.clearRect(0,0, exerciseVideoWidth, exerciseVideoHeight)
 
     if (guiState.output.showVideo) {
-
+      // Draw webcam video and skeleton on frames
       ctx.save();
       ctx.scale(-1, 1);
       ctx.translate(-videoWidth, 0);
       ctx.drawImage(video, 0, 0, videoWidth, videoHeight);
       ctx.restore();
 
-      
+      // Draw the video sourced from the exercise video
       ctx_exercise.save();
       ctx_exercise.scale(-1, 1);
       ctx_exercise.translate(-exerciseVideoWidth, 0);

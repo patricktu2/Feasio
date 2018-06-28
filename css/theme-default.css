@@ -7371,6 +7371,13 @@ display:none;
   top:10px;
 }
 
+#accuracy-slider{
+  z-index: 2;
+  position:absolute;
+  left:10px;
+  top:700px;
+}
+
 #output {
   z-index: 1; 
   position:absolute; 

@@ -184,46 +184,92 @@
                 
                 <!-- PAGE CONTENT WRAPPER -->
                 <div class="page-content-wrap">
-                
-                    <!-- START KNOB SLIDER -->
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">Knob Slider</h3>
-                        </div>                            
-                        <div class="panel-body">
-
-                            <div class="row">
-                                <div class="col-md-4 text-center">
-                                    <h5>Disable display input</h5>
-                                    <input class="knob" data-width="150" data-fgColor="#33414E" data-displayInput=false value="35"/>                                        
+                    
+                    <!-- START OVERVIEW DASHBOARD -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <!-- START PANEL -->
+                            <div class="panel panel-default">
+                                <div class="panel-heading ui-draggable-handle">
+                                    <h2 class="panel-title">Dashoboard overview</h2>
+                                </div>   
+                                <!-- START PANEL BODY -->
+                                <div class="panel-body">
+                                    <!-- Summary Dashboard Box 1 -->
+                                    <div class="col-md-3">
+                                        <div class="widget widget-default widget-item-icon">
+                                            <div class="widget-item-left">
+                                                <span class="fa fa-play-circle-o"></span>
+                                            </div>                             
+                                            <div class="widget-data">
+                                                <div class="widget-int num-count">48</div>
+                                                <div class="widget-title">Total Trainings</div>
+                                                <div class="widget-subtitle">accomplished</div>
+                                            </div>      
+                                        </div>
+                                    </div>
+                                    <!-- Summary Dashboard Box 2 -->
+                                    <div class="col-md-3">
+                                        <div class="widget widget-default widget-item-icon">
+                                            <div class="widget-item-left">
+                                                <span class="fa fa-thumbs-up"></span>
+                                            </div>                             
+                                            <div class="widget-data">
+                                                <div class="widget-int num-count">74%</div>
+                                                <div class="widget-title">Average performance</div>
+                                                <div class="widget-subtitle">on excercise posture</div>
+                                            </div>      
+                                        </div>
+                                    </div>
+                                    <!-- Summary Dashboard Box 3 -->
+                                    <div class="col-md-3">
+                                        <div class="widget widget-default widget-item-icon">
+                                            <div class="widget-item-left">
+                                                <span class="fa fa-calendar"></span>
+                                            </div>                             
+                                            <div class="widget-data">
+                                                <div class="widget-int num-count">5</div>
+                                                <div class="widget-title">Day training streak</div>
+                                                <div class="widget-subtitle">Keep it up!</div>
+                                            </div>      
+                                        </div>
+                                    </div>
+                                    <!-- Summary Dashboard Box 4 -->
+                                    <div class="col-md-3">
+                                        <div class="widget widget-default widget-item-icon">
+                                            <div class="widget-item-left">
+                                                <span class="fa fa-star-o"></span>
+                                            </div>                             
+                                            <div class="widget-data">
+                                                <div class="widget-int num-count">880</div>
+                                                <div class="widget-title">Feasio Health points</div>
+                                                <div class="widget-subtitle">120 until next level</div>
+                                            </div>      
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="col-md-4 text-center">
-                                    <h5>'cursor' mode</h5>
-                                    <input class="knob" data-width="150" data-cursor=true data-fgColor="#81C500" value="29"/>                                        
-                                </div>
-                                <div class="col-md-4 text-center">
-                                    <h5>Display previous value</h5>
-                                    <input class="knob" data-width="150" data-min="-100" data-fgColor="#FD421C" data-displayPrevious=true value="44"/>
-                                </div>
-                            </div>                                                                    
-
-                            <div class="row">
-                                <div class="col-md-4 text-center">
-                                    <h5>Angle offset</h5>
-                                    <input class="knob" data-width="150" data-angleOffset="90" data-linecap="round" data-fgColor="#61C0E6" value="35"/>
-                                </div>
-                                <div class="col-md-4 text-center">
-                                    <h5>Angle offset and arc</h5>
-                                    <input class="knob" data-width="150" data-cursor=true data-fgColor="#FEC558" value="29"/>                                        
-                                </div>
-                                <div class="col-md-4 text-center">
-                                    <h5>5-digit values, step 1000</h5>
-                                    <input class="knob" data-width="150" data-min="-15000" data-displayPrevious=true data-max="15000" data-step="1000" value="-11000" data-fgColor="#81C500"/>                                         
-                                </div>
-                            </div>              
+                                <!-- END PANEL BODY -->
+                            </div>
+                            <!-- END PANEL -->
                         </div>
                     </div>
-                    <!-- END KNOB SLIDER -->
+
+                    <!-- START AVG ACCURACY -->
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                             <div class="panel panel-default">
+                                 <div class="panel-heading">
+                                    <h3 class="panel-title">Average 10 days accuracy</h3>
+                                 </div>                            
+                                <div class="panel-body">
+                                    <div id="average-10days-accuracy" style="height: 300px;"></div>
+                                </div>
+                            </div>                                                                    
+            
+                        </div>
+                    </div>
+                    <!-- START AVG ACCURACY -->
+
                     <!-- START SECOND ROW -->
                     <div class="row">
                         <div class="col-md-6">
@@ -231,10 +277,10 @@
                             <!-- START BAR CHART -->
                             <div class="panel panel-default">
                                 <div class="panel-heading">
-                                    <h3 class="panel-title">Bar Chart</h3>                                
+                                    <h3 class="panel-title"> Average accuracy per exercise</h3>                                
                                 </div>
                                 <div class="panel-body">
-                                    <div id="morris-bar-example" style="height: 300px;"></div>
+                                    <div id="accuracy-per-exercise" style="height: 300px;"></div>
                                 </div>
                             </div>
                             <!-- END BAR CHART -->
@@ -245,10 +291,10 @@
                             <!-- START DONUT CHART -->
                             <div class="panel panel-default">
                                 <div class="panel-heading">
-                                    <h3 class="panel-title">Donut Chart</h3>                                
+                                    <h3 class="panel-title">Time spent on each exercise in minutes</h3>                                
                                 </div>
                                 <div class="panel-body">
-                                    <div id="morris-donut-example" style="height: 300px;"></div>
+                                    <div id="exercise-share" style="height: 300px;"></div>
                                 </div>
                             </div>
                             <!-- END DONUT CHART -->                        
@@ -307,7 +353,7 @@
                     </div>
                     <div class="mb-footer">
                         <div class="pull-right">
-                            <a href="pages-login.html" class="btn btn-success btn-lg">Yes</a>
+                            <a href="login.html" class="btn btn-success btn-lg">Yes</a>
                             <button class="btn btn-default btn-lg mb-control-close">No</button>
                         </div>
                     </div>
