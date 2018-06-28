@@ -31,7 +31,7 @@ var morrisCharts = function() {
             {label: "7. Strengthening legs and back", value: 44},
             {label: "8. Back stabilization", value: 11},
         ],
-        colors: ['#95B75D', '#1caf9a', '#FEA223']
+        colors: ['#95B75D', '#1caf9a', '#FEA223', "#ee98fb", "#ffa4a2", "#62757f", "#2286c3", "#c30000"]
     });
 
 
@@ -53,74 +53,43 @@ var morrisCharts = function() {
         barColors: ['#B64645', '#33414E']
     });
 
-    /* *feasio sample data end*/
-
     Morris.Line({
-      element: 'morris-line-example',
+      element: 'accuracy-per-side',
       data: [
-        { y: '2018', a: 100, b: 90 },
-        { y: '2007', a: 75,  b: 65 },
-        { y: '2008', a: 50,  b: 40 },
-        { y: '2009', a: 75,  b: 65 },
-        { y: '2010', a: 50,  b: 40 },
-        { y: '2011', a: 75,  b: 65 },
-        { y: '2012', a: 100, b: 90 }
+        { y: '2018-04-01', a: 65, b: 70 },
+        { y: '2018-04-14', a: 79,  b: 65 },
+        { y: '2018-05-01', a: 50,  b: 60 },
+        { y: '2018-05-14', a: 75,  b: 65 },
+        { y: '2018-06-01', a: 72,  b: 64 },
+        { y: '2018-06-14', a: 60,  b: 65 },
+        { y: '2018-07-01', a: 57, b: 48 }
       ],
       xkey: 'y',
       ykeys: ['a', 'b'],
-      labels: ['Series A', 'Series B'],
+      labels: ['Left', 'Right'],
       resize: true,
       lineColors: ['#33414E', '#95B75D']
     });
 
 
-    
-
-    Morris.Area({
+    Morris.Line({
         element: 'morris-area-example',
         data: [
-            { y: '2006', a: 100, b: 90 },
-            { y: '2007', a: 75,  b: 65 },
-            { y: '2008', a: 50,  b: 40 },
-            { y: '2009', a: 75,  b: 65 },
-            { y: '2010', a: 50,  b: 40 },
-            { y: '2011', a: 75,  b: 65 },
-            { y: '2012', a: 100, b: 90 }
+            { y: '2018-04-01', a: 80, b: 90 },
+            { y: '2018-04-14', a: 75,  b: 83 },
+            { y: '2018-05-01', a: 69,  b: 79 },
+            { y: '2018-05-14', a: 75,  b: 68 },
+            { y: '2018-06-01', a: 88,  b: 75 },
+            { y: '2018-06-14', a: 75,  b: 65 },
+            { y: '2018-07-01', a: 80, b: 90 }
         ],
         xkey: 'y',
         ykeys: ['a', 'b'],
-        labels: ['Series A', 'Series B'],
+        labels: ['Patrick', 'Thomas'],
         resize: true,
         lineColors: ['#1caf9a', '#FEA223']
-    });
+    });    
 
-
-    Morris.Bar({
-        element: 'morris-bar-example',
-        data: [
-            { y: '2006', a: 100, b: 90 },
-            { y: '2007', a: 75,  b: 65 },
-            { y: '2008', a: 50,  b: 40 },
-            { y: '2009', a: 75,  b: 65 },
-            { y: '2010', a: 50,  b: 40 },
-            { y: '2011', a: 75,  b: 65 },
-            { y: '2012', a: 100, b: 90 }
-        ],
-        xkey: 'y',
-        ykeys: ['a', 'b'],
-        labels: ['Series A', 'Series B'],
-        barColors: ['#B64645', '#33414E']
-    });
-
-
-    Morris.Donut({
-        element: 'morris-donut-example',
-        data: [
-            {label: "Download Sales", value: 12},
-            {label: "In-Store Sales", value: 30},
-            {label: "Mail-Order Sales", value: 20}
-        ],
-        colors: ['#95B75D', '#1caf9a', '#FEA223']
-    });
+    /* *feasio sample data end*/
 
 }();
