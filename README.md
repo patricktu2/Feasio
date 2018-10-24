@@ -1,7 +1,7 @@
 # Feasio
 
 
-![Alt Text](feasio-screenshot.gif)
+![Alt Text](feasio-screenshot.png)
 
 
 Webappp Prototype for a hackathon using TensorFlowJS for pose estimation.
